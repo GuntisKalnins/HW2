@@ -1,2 +1,2 @@
 # HW2
-HTML+CSS(Bootstrap/Sass)
+HTML+CSS(no Bootstrap/Sass)
