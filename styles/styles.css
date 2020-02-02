@@ -197,8 +197,11 @@ button:hover {
         grid-template-rows: 1fr 2fr 600px auto 1fr;               
     }
     .pc-ad { 
-        display: inline-block;
+        display: grid;
         grid-area: pc-ad;
+        justify-items: center;
+        padding-top: 30px;
+
     }
     .ad {
         display: none;
