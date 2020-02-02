@@ -31,7 +31,7 @@ p, li{
         "hero"
         "inner-body"
         "footer";
-    border: 1px white dotted;
+    
 
 }
 
@@ -92,18 +92,21 @@ button:hover {
     display: grid;
     justify-items: center;
     grid-area: header;
+    border: 1px white double;
 }
 
 .hero {
     display: grid;
     justify-items: center;
     grid-area: hero;
+    border: 1px white double;
 }
 
 .inner-body {
     display: grid;
     justify-items: center;
     grid-area: inner-body;
+    border: 1px white double;
 }
 
 .sidebar {
@@ -111,6 +114,7 @@ button:hover {
     justify-items: auto;
     grid-area: sidebar;
     display: none;
+    border: 1px white double;
 }
 .sidebar-feature{
     display:flex;    
@@ -120,6 +124,7 @@ button:hover {
     display: grid;
     justify-items: center;
     grid-area: footer;
+    border: 1px white double;
 }
 
 @media (min-width: 576px){
