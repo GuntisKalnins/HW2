@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;    
+    padding: 3px;
+    margin: 0px;
+}
+
+html{
+    font-family: 'Patrick Hand', cursive;
+    background-color: rgb(48, 42, 42);
+    color: white;
+}
+h1 {
+    padding-bottom: 25px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+p, li{
+    font-size: 20px;
+}
+
+.container {
+    display: grid;    
+    grid-template-columns: 1fr;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 4fr 100px;
+    grid-template-areas: 
+        "header"
+        "hero"
+        "inner-body"
+        "footer";
+    border: 1px white dotted;
+
+}
+
+
+
+.brand-name h1{
+    font-family: 'Zhi Mang Xing', cursive;
+    text-align: center;
+    font-size: 3em;
+}
+
+.global-nav{
+    display: grid;
+    grid-column: 1;
+}
+
+.nav-items {
+    list-style: none;
+}
+
+a { 
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+    transition: all 0.3s;
+    font-size: 20px;
+}
+
+a:hover{
+    color: red;
+}
+
+.tools {
+    width: 55%;
+    padding-top: 15px;
+    padding-left: 15px;
+    grid-column: 2;
+}
+input{
+    width: 100%;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    height: 55px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 2s ease-in-out;
+    
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+.header {
+    display: grid;
+    justify-items: center;
+    grid-area: header;
+}
+
+.hero {
+    display: grid;
+    justify-items: center;
+    grid-area: hero;
+}
+
+.inner-body {
+    display: grid;
+    justify-items: center;
+    grid-area: inner-body;
+}
+
+.sidebar {
+    display: grid;
+    justify-items: auto;
+    grid-area: sidebar;
+    display: none;
+}
+.sidebar-feature{
+    display:flex;    
+}
+
+.footer {
+    display: grid;
+    justify-items: center;
+    grid-area: footer;
+}
+
+@media (min-width: 576px){
+    .sidebar {
+        display: block;
+    }
+
+    .container {
+        grid-template-areas:
+            "header header header"            
+            "hero hero hero"
+            "inner-body inner-body inner-body"
+            "sidebar sidebar sidebar"
+            "footer footer footer";
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-rows: 1fr 2fr 4fr 1fr 1fr;               
+    }
+
+    .brand {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .global-nav {        
+        grid-column: 2 / 5;
+        grid-row: 1;
+    }
+    
+    .nav-items {
+        display:inline-block;        
+    }
+
+    nav {
+        margin-bottom: 40px;
+    }
+    
+    .tools {
+        justify-self: end;
+        width:fit-content;
+        padding-top: 15px;
+    }
+
+    .article-feature{
+        grid-column: 1 ;
+        grid-row: 1;
+    }
+
+    .ad {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .article-listing {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
+
+
